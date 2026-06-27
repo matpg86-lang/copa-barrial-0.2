@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-    <meta charset="UTF-8">
+<head> <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copa Barrial - Torneo de League of Legends</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Header -->
     <header class="header">
         <div class="container">
             <h1 class="logo">🎮 Copa Barrial</h1>
-
             <nav class="nav" aria-label="Navegación principal">
                 <a href="#inicio">Inicio</a>
                 <a href="#informacion">Información</a>
@@ -21,224 +19,155 @@
     </header>
 
     <main>
+        <section id="inicio" class="hero">
+            <video
+                class="hero-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto">
+                <source src="assets/background.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
 
-<!-- Hero -->
-<section id="inicio" class="hero">
+            <div class="hero-overlay"></div>
 
-    <!-- Video de fondo -->
-    <video
-        class="hero-video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto">
-
-        <source src="assets/background.mp4" type="video/mp4">
-
-        Tu navegador no soporta videos HTML5.
-
-    </video>
-
-    <!-- Oscurece el video -->
-    <div class="hero-overlay"></div>
-
-    <!-- Contenido -->
-    <div class="hero-content">
-
-        <h1>Copa Barrial</h1>
-
-        <p class="subtitle">
-            Torneo de League of Legends
-        </p>
-
-        <p class="description">
-            Compite, demuestra tu dominio y gana increíbles premios.
-        </p>
-
-        <a href="#inscripcion" class="btn btn-primary">
-            Inscribirse Ahora
-        </a>
-
-    </div>
-
-</section>
-
-    <!-- Información -->
-<section id="informacion" class="section">
-
-    <div class="container">
-
-        <div class="glass-section">
-
-            <h2>Información del Torneo</h2>
-
-            <div class="cards-grid">
-
-                <article class="card">
-                    <div class="card-icon">📅</div>
-                    <h3>Fechas</h3>
-                    <p>15 - 30 de Julio 2024</p>
-                    <p class="card-detail">
-                        Todos los viernes y sábados a las 19:00
-                    </p>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">👥</div>
-                    <h3>Equipo</h3>
-                    <p>5 jugadores por equipo</p>
-                    <p class="card-detail">
-                        Mínimo 7 miembros en el roster
-                    </p>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">🏆</div>
-                    <h3>Formato</h3>
-                    <p>Liga Round Robin</p>
-                    <p class="card-detail">
-                        Finales en formato de Playoffs
-                    </p>
-                </article>
-
+            <div class="hero-content">
+                <h1>Copa Barrial</h1>
+                <p class="subtitle">Torneo de League of Legends</p>
+                <p class="description">Compite, demuestra tu dominio y gana increíbles premios.</p>
+                <a href="#inscripcion" class="btn btn-primary">Inscribirse Ahora</a>
             </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-        <!-- Inscripción -->
-        <section id="inscripcion" class="section alt-bg">
-
-            <div class="container">
-
-            <div class="glass-section">
-
-                <div class="form-container">
-
-                    <form class="form" method="post">
-
-                        <h2 class="form-title">
-                            Inscribí a tu equipo
-                        </h2>
-
-                        <div class="form-group team-name-group">
-                            <input
-                                type="text"
-                                id="team-name"
-                                name="team-name"
-                                placeholder="Nombre del Equipo"
-                                required>
-                        </div>
-
-                        <div class="form-row">
-
-                            <div class="form-group">
-                                <label for="captain-name">Capitán</label>
-
-                                <input
-                                    type="text"
-                                    id="captain-name"
-                                    name="captain-name"
-                                    placeholder="Tu nombre"
-                                    required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="captain-discord">Discord</label>
-
-                                <input
-                                    type="text"
-                                    id="captain-discord"
-                                    name="captain-discord"
-                                    placeholder="Tu usuario#0000"
-                                    required>
-                            </div>
-
-                        </div>
-
-                        <div class="roster-section">
-
-                            <div class="roster-container">
-
-                                <h3 class="roster-title">
-                                    Roster
-                                </h3>
-
-                                <div class="roster-grid">
-
-                                    <div class="form-group">
-                                        <label for="top">Top</label>
-                                        <input type="text" id="top" name="top" placeholder="Summoner Top" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="jg">Jg</label>
-                                        <input type="text" id="jg" name="jg" placeholder="Summoner Jg" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="mid">Mid</label>
-                                        <input type="text" id="mid" name="mid" placeholder="Summoner Mid" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="adc">ADC</label>
-                                        <input type="text" id="adc" name="adc" placeholder="Summoner ADC" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="supp">Supp</label>
-                                        <input type="text" id="supp" name="supp" placeholder="Summoner Supp" required>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="form-group checkbox">
-
-                            <input
-                                type="checkbox"
-                                id="terms"
-                                name="terms"
-                                required>
-
-                            <label for="terms">
-                                Acepto los términos y condiciones del torneo.
-                            </label>
-
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-block">
-                            Inscribir Equipo
-                        </button>
-
-                    </form>
-
-                </div>
-            </div>
-            </div>
-
         </section>
 
+        <section id="informacion" class="section">
+            <div class="container">
+                <div class="glass-section">
+                    <h2>Información del Torneo</h2>
+                    <div class="cards-grid">
+                        <article class="card">
+                            <div class="card-icon">📅</div>
+                            <h3>Fechas</h3>
+                            <p>15 - 30 de Julio 2026</p> <p class="card-detail">Todos los viernes y sábados a las 19:00</p>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-icon">👥</div>
+                            <h3>Equipo</h3>
+                            <p>5 jugadores por equipo</p>
+                            <p class="card-detail">Mínimo 5 miembros en el roster</p>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-icon">🏆</div>
+                            <h3>Formato</h3>
+                            <p>Liga Round Robin</p>
+                            <p class="card-detail">Finales en formato de Playoffs</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="inscripcion" class="section alt-bg">
+            <div class="container">
+                <div class="glass-section">
+                    <div class="form-container">
+                        <form class="form" novalidate> 
+                            <h2 class="form-title">Inscribí a tu equipo</h2>
+
+                            <div class="form-group team-name-group">
+                                <input
+                                    type="text"
+                                    id="team-name"
+                                    name="team-name"
+                                    placeholder="Nombre del Equipo"
+                                    required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="captain-name">Capitán</label>
+                                    <input
+                                        type="text"
+                                        id="captain-name"
+                                        name="captain-name"
+                                        placeholder="Usuario#TAG"
+                                        required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="captain-discord">Discord</label>
+                                    <input
+                                        type="text"
+                                        id="captain-discord"
+                                        name="captain-discord"
+                                        placeholder="Usuario"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="roster-section">
+                                <div class="roster-container">
+                                    <h3 class="roster-title">Roster</h3>
+                                    <div class="roster-grid">
+                                        <div class="form-group">
+                                            <label for="top">TOP</label>
+                                            <input type="text" id="top" name="top" placeholder="Usuario#TAG" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="jg">JG</label>
+                                            <input type="text" id="jg" name="jg" placeholder="Usuario#TAG" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="mid">MID</label>
+                                            <input type="text" id="mid" name="mid" placeholder="Usuario#TAG" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="adc">ADC</label>
+                                            <input type="text" id="adc" name="adc" placeholder="Usuario#TAG" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="supp">SUPP</label>
+                                            <input type="text" id="supp" name="supp" placeholder="Usuario#TAG" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group checkbox">
+                                <input
+                                    type="checkbox"
+                                    id="terms"
+                                    name="terms"
+                                    required>
+                                <label for="terms">
+                                    Acepto los términos y condiciones del torneo.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">Inscribir Equipo</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-
         <div class="container">
             <p>&copy; 2026 Copa Barrial - Todos los derechos reservados. No estamos afiliados a Riot Games, este proyecto es con fines comunitarios.</p>
         </div>
+    </</footer>
 
-    </footer>
+    <div id="notification-container"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
-
 </body>
 </html>
