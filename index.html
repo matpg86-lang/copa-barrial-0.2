@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-<head> <meta charset="UTF-8">
+
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copa Barrial - Torneo de League of Legends</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <header class="header">
         <div class="container">
-            <h1 class="logo">🎮 Copa Barrial</h1>
             <nav class="nav" aria-label="Navegación principal">
                 <a href="#inicio">Inicio</a>
                 <a href="#informacion">Información</a>
@@ -20,13 +22,7 @@
 
     <main>
         <section id="inicio" class="hero">
-            <video
-                class="hero-video"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="auto">
+            <video class="hero-video" autoplay muted loop playsinline preload="auto">
                 <source src="assets/background.mp4" type="video/mp4">
                 Tu navegador no soporta videos HTML5.
             </video>
@@ -34,9 +30,7 @@
             <div class="hero-overlay"></div>
 
             <div class="hero-content">
-                <h1>Copa Barrial</h1>
-                <p class="subtitle">asd</p>
-                <p class="description">asdasdsadasd</p>
+                <img src="assets/logo.png" alt="Copa Barrial" class="hero-logo">
                 <a href="#inscripcion" class="btn btn-primary">Inscribirse Ahora</a>
             </div>
         </section>
@@ -48,22 +42,55 @@
                     <div class="cards-grid">
                         <article class="card">
                             <div class="card-icon">📅</div>
-                            <h3>Fechas</h3>
-                            <p>15 - 30 de Julio 2026</p> <p class="card-detail">Todos los viernes y sábados a las 19:00</p>
+                            <h3 id="nextTournamentName">
+                                Próximo torneo
+                            </h3>
+
+                            <p id="nextTournamentDate">
+                                Cargando...
+                            </p>
+
+                            <div class="countdown">
+
+                                <div class="count-item">
+                                    <span id="days">00</span>
+                                    <small>Días</small>
+                                </div>
+
+                                <div class="count-item">
+                                    <span id="hours">00</span>
+                                    <small>Horas</small>
+                                </div>
+
+                                <div class="count-item">
+                                    <span id="minutes">00</span>
+                                    <small>Minutos</small>
+                                </div>
+
+                                <div class="count-item">
+                                    <span id="seconds">00</span>
+                                    <small>Segundos</small>
+                                </div>
+                            </div>
+                            <p id="tournamentSlots" class="slots">
+                                Cargando cupos...
+                            </p>
+
+                            <div class="slots-bar">
+                                <div id="slotsProgress"></div>
+                            </div>
                         </article>
 
                         <article class="card">
+
                             <div class="card-icon">👥</div>
-                            <h3>Equipo</h3>
-                            <p>5 jugadores por equipo</p>
-                            <p class="card-detail">Mínimo 5 miembros en el roster</p>
-                        </article>
 
-                        <article class="card">
-                            <div class="card-icon">🏆</div>
-                            <h3>Formato</h3>
-                            <p>Liga Round Robin</p>
-                            <p class="card-detail">Finales en formato de Playoffs</p>
+                            <h3>Equipos</h3>
+
+                            <div id="teamsList" class="teams-list">
+
+                            </div>
+
                         </article>
                     </div>
                 </div>
@@ -74,36 +101,24 @@
             <div class="container">
                 <div class="glass-section">
                     <div class="form-container">
-                        <form class="form" novalidate> 
+                        <form class="form" novalidate>
                             <h2 class="form-title">Inscribí a tu equipo</h2>
 
                             <div class="form-group team-name-group">
-                                <input
-                                    type="text"
-                                    id="team-name"
-                                    name="team-name"
-                                    placeholder="Nombre del Equipo"
+                                <input type="text" id="team-name" name="team-name" placeholder="Nombre del Equipo"
                                     required>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="captain-name">Capitán</label>
-                                    <input
-                                        type="text"
-                                        id="captain-name"
-                                        name="captain-name"
-                                        placeholder="Usuario#TAG"
+                                    <input type="text" id="captain-name" name="captain-name" placeholder="Usuario#TAG"
                                         required>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="captain-discord">Discord</label>
-                                    <input
-                                        type="text"
-                                        id="captain-discord"
-                                        name="captain-discord"
-                                        placeholder="Usuario"
+                                    <input type="text" id="captain-discord" name="captain-discord" placeholder="Usuario"
                                         required>
                                 </div>
                             </div>
@@ -141,11 +156,7 @@
                             </div>
 
                             <div class="form-group checkbox">
-                                <input
-                                    type="checkbox"
-                                    id="terms"
-                                    name="terms"
-                                    required>
+                                <input type="checkbox" id="terms" name="terms" required>
                                 <label for="terms">
                                     Acepto los términos y condiciones del torneo.
                                 </label>
@@ -161,13 +172,82 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Copa Barrial - Todos los derechos reservados. No estamos afiliados a Riot Games, este proyecto es con fines comunitarios.</p>
+            <p>&copy; 2026 Copa Barrial - Todos los derechos reservados. No estamos afiliados a Riot Games, este
+                proyecto es con fines comunitarios.</p>
         </div>
-    </</footer>
+    </footer>
 
     <div id="notification-container"></div>
 
+    <div id="paymentModal" class="modal">
+
+        <div class="modal-content">
+
+            <h2>💰 Finalizá tu inscripción</h2>
+
+            <p>
+                Tu equipo fue registrado correctamente.
+            </p>
+
+            <p>
+                Para reservar el cupo realizá la transferencia y luego enviá el comprobante por WhatsApp.
+            </p>
+
+            <div class="payment-box">
+
+                <h3>Valor</h3>
+
+                <strong>$15.000</strong>
+
+                <h3>Alias</h3>
+
+                <div class="copy-field">
+
+                    <span id="alias">
+                        copa.barrial
+                    </span>
+
+                    <button onclick="copyText('alias')">
+                        Copiar
+                    </button>
+
+                </div>
+
+                <h3>CVU</h3>
+
+                <div class="copy-field">
+
+                    <span id="cvu">
+                        0000003100000000000000
+                    </span>
+
+                    <button onclick="copyText('cvu')">
+                        Copiar
+                    </button>
+
+                </div>
+
+            </div>
+
+            <a id="whatsappButton" target="_blank" class="btn btn-primary">
+                Enviar comprobante por WhatsApp
+            </a>
+
+            <button class="btn" onclick="closePaymentModal()">
+                Cerrar
+            </button>
+
+        </div>
+
+    </div>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
