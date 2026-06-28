@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copa Barrial - Torneo de League of Legends</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -156,10 +156,22 @@
                             </div>
 
                             <div class="form-group checkbox">
+
                                 <input type="checkbox" id="terms" name="terms" required>
+
                                 <label for="terms">
-                                    Acepto los términos y condiciones del torneo.
+
+                                    Acepto los
+
+                                    <a href="assets/terminos-y-condiciones.pdf" target="_blank"
+                                        rel="noopener noreferrer" class="terms-link">
+                                        📄 términos y condiciones
+                                    </a>
+
+                                    del torneo.
+
                                 </label>
+
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-block">Inscribir Equipo</button>
@@ -190,38 +202,24 @@
             </p>
 
             <p>
-                Para reservar el cupo realizá la transferencia y luego enviá el comprobante por WhatsApp.
+                Para reservar el cupo realizá la transferencia y luego enviá el comprobante por Discord.
             </p>
 
             <div class="payment-box">
 
                 <h3>Valor</h3>
 
-                <strong>$15.000</strong>
+                <strong>$50.000</strong>
 
                 <h3>Alias</h3>
 
                 <div class="copy-field">
 
                     <span id="alias">
-                        copa.barrial
+                        copabarrial
                     </span>
 
-                    <button onclick="copyText('alias')">
-                        Copiar
-                    </button>
-
-                </div>
-
-                <h3>CVU</h3>
-
-                <div class="copy-field">
-
-                    <span id="cvu">
-                        0000003100000000000000
-                    </span>
-
-                    <button onclick="copyText('cvu')">
+                    <button id="copyAlias">
                         Copiar
                     </button>
 
@@ -229,13 +227,21 @@
 
             </div>
 
-            <a id="whatsappButton" target="_blank" class="btn btn-primary">
-                Enviar comprobante por WhatsApp
-            </a>
+            <div class="modal-actions">
 
-            <button class="btn" onclick="closePaymentModal()">
-                Cerrar
-            </button>
+                <a href="https://discord.gg/6mxkMWJ8vV" target="_blank" class="btn btn-primary">
+
+                    Ir al servidor de Discord
+
+                </a>
+
+                <button class="btn" id="closePaymentModal">
+
+                    Cerrar
+
+                </button>
+
+            </div>
 
         </div>
 
@@ -246,8 +252,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="script.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 
 </html>

@@ -739,6 +739,26 @@ body {
     font-weight: normal;
 }
 
+.terms-link{
+
+    color:#8d8d8d;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.2s;
+
+}
+
+.terms-link:hover{
+
+    color:#464646;
+
+    text-decoration:underline;
+
+}
+
 .modal {
 
     position: fixed;
@@ -826,6 +846,26 @@ body {
     background: #7c3aed;
 
     color: white;
+
+}
+
+.modal-actions{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:16px;
+
+    margin-top:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.modal-actions .btn{
+
+    min-width:180px;
 
 }
 
